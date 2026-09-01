@@ -4,7 +4,7 @@ April UI is a Laravel starter kit for server-rendered Blade applications. It inc
 
 ## Create an application
 
-Install it with the Laravel installer after the starter kit is published to Packagist:
+Install it with the Laravel installer from the published GitHub repository:
 
 ```shell
 laravel new my-app --using=yungifez/april-ui-blade-starter-kit

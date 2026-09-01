@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9868900f4329cd885ee1ab5bbc611756",
+    "content-hash": "5bb55432d5c77ee96921f1a01773133d",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -7663,16 +7663,16 @@
         },
         {
             "name": "yungifez/april-ui",
-            "version": "dev-main",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yungifez/april-ui.git",
-                "reference": "40e320dd105ac6ec9fe08a59021d827b9cbc847a"
+                "reference": "74b1ac00f350049e61b0a16e868db585dcd6d490"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yungifez/april-ui/zipball/40e320dd105ac6ec9fe08a59021d827b9cbc847a",
-                "reference": "40e320dd105ac6ec9fe08a59021d827b9cbc847a",
+                "url": "https://api.github.com/repos/yungifez/april-ui/zipball/74b1ac00f350049e61b0a16e868db585dcd6d490",
+                "reference": "74b1ac00f350049e61b0a16e868db585dcd6d490",
                 "shasum": ""
             },
             "require": {
@@ -7687,7 +7687,7 @@
                 "livewire/livewire": "^3.4",
                 "mallardduck/blade-lucide-icons": "^2.0",
                 "nunomaduro/collision": "^8.0",
-                "orchestra/testbench": "^10.0",
+                "orchestra/testbench": "^10.0|^11.0",
                 "pestphp/pest": "^3.8|^4.0",
                 "pestphp/pest-plugin-arch": "^3.1|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.2|^4.0",
@@ -7698,68 +7698,27 @@
             "suggest": {
                 "livewire/livewire": "Required when using the optional Livewire data-table adapter."
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
-                    "providers": [
-                        "Yungifez\\AprilUI\\AprilUIServiceProvider"
-                    ],
                     "aliases": {
                         "AprilUI": "Yungifez\\AprilUI\\Facades\\AprilUI"
-                    }
+                    },
+                    "providers": [
+                        "Yungifez\\AprilUI\\AprilUIServiceProvider"
+                    ]
                 }
             },
             "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
                 "psr-4": {
                     "Yungifez\\AprilUI\\": "src/",
                     "Yungifez\\AprilUI\\Database\\Factories\\": "database/factories/"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Yungifez\\AprilUI\\Tests\\": "tests/",
-                    "Workbench\\App\\": "workbench/app/"
                 }
             },
-            "scripts": {
-                "post-autoload-dump": [
-                    "@composer run prepare"
-                ],
-                "clear": [
-                    "@php vendor/bin/testbench package:purge-april-ui --ansi"
-                ],
-                "prepare": [
-                    "@php vendor/bin/testbench package:discover --ansi"
-                ],
-                "build": [
-                    "@composer run prepare",
-                    "@php vendor/bin/testbench workbench:build --ansi"
-                ],
-                "start": [
-                    "Composer\\Config::disableProcessTimeout",
-                    "@composer run build",
-                    "@php vendor/bin/testbench serve"
-                ],
-                "analyse": [
-                    "vendor/bin/phpstan analyse"
-                ],
-                "test": [
-                    "vendor/bin/pest"
-                ],
-                "test-coverage": [
-                    "vendor/bin/pest --coverage"
-                ],
-                "format": [
-                    "vendor/bin/pint"
-                ],
-                "registry": [
-                    "@php scripts/build-registry.php"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -7770,7 +7729,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "A livewire blade UI component library",
+            "description": "A Laravel Blade component library with Alpine JS and Livewire support.",
             "homepage": "https://github.com/yungifez/april-ui",
             "keywords": [
                 "april-ui",
@@ -7778,10 +7737,10 @@
                 "yungifez"
             ],
             "support": {
-                "source": "https://github.com/yungifez/april-ui/tree/main",
-                "issues": "https://github.com/yungifez/april-ui/issues"
+                "issues": "https://github.com/yungifez/april-ui/issues",
+                "source": "https://github.com/yungifez/april-ui/tree/v1.0.0"
             },
-            "time": "2026-09-01T02:41:15+00:00"
+            "time": "2026-09-01T02:59:06+00:00"
         }
     ],
     "packages-dev": [
@@ -11369,10 +11328,8 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "yungifez/april-ui": 20
-    },
+    "minimum-stability": "stable",
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
